@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: which pos
+# key: which_pos
+# comment: find out which position corresponds to given strain, time, etc.
+# --
+unique(as.vector(d$data$pos[which(
+                            d$data$cepa == "$1")]))

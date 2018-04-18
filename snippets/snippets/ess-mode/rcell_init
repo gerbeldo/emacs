@@ -1,0 +1,155 @@
+# -*- mode: snippet -*-
+# name: rcell
+# key: rcell
+# --
+
+################################################################################
+# $1_$2
+################################################################################
+
+########################################
+# Microscopio
+########################################
+
+# t_exp.r = {$3:1000}ms
+# t_exp.y = $4ms
+# t_exp.c = {$5:300}ms
+
+# intensidad.r = {$6:100}%
+# intensidad.y = {$7:100}%
+# intensidad.c = {$8:100}%
+
+library(Rcell)
+
+load("$1_data.RData")
+
+analysis <- "~/Dropbox/m_analysis/$0"
+path <- "/run/media/german/GER-BAK/acl/"
+
+
+setwd(path)
+d <- load.cell.data()
+
+setwd(analysis)
+pdata <- read.csv("$1_pdata.csv")
+
+d <- merge(d, pdata)
+
+
+################################################################################
+# VARIABLES
+################################################################################
+
+d <- transform(d, f.total.y = f.tot.y - (a.tot * f.bg.y))
+d <- transform(d, f.total.c = f.tot.c - (a.tot * f.bg.c))
+d <- transform(d, f.total.r = f.tot.r - (a.tot * f.bg.r))
+
+d <- transform(d, conc.f.total.y = f.total.y/a.tot)
+d <- transform(d, conc.f.total.c = f.total.c/a.tot)
+d <- transform(d, conc.f.total.r = f.total.r/a.tot)
+
+d <- transform(d, ell.perim = pi * (3 * (maj.axis / 2 + min.axis / 2) -
+                                    sqrt((3*maj.axis / 2 + min.axis / 2) *
+                                         (maj.axis / 2 + 3 * min.axis / 2))))
+
+d <- transform(d, el.p = ell.perim / perim)
+
+################################################################################
+# IMAGE
+################################################################################
+
+save.image("$1_data.RData")
+
+
+################################################################################
+# FILTERS
+################################################################################
+
+# QC.filter filters cells which return FALSE in the condition.
+# So, to filter cells of area < 100, use: !(a.tot < 100)
+
+# make copy of original data frame, although I could use QC.undo or QC.reset...
+d2 <- d
+
+# count total/filtered
+count(d2$data, vars = "QC")
+
+#################
+# fft.stat
+#################
+# in unstimulated cells it is usually < 0.6. So we can filter the others.
+# LOOK AT THE CELLS!
+
+cplot(d2, ~fft.stat, binwidth = 0.05)
+
+cimage(d2, ~cell,
+       subset = fft.stat > 0.55,
+       box.size = 30,
+       channel=c("BF.out"),
+       N=100)
+
+d2 <- QC.filter(d2, !(fft.stat > 0.55))
+
+
+#################
+# Area
+#################
+
+cplot(d2, ~a.tot)
+
+
+# very big ones
+cimage(d2, ~cell,
+       subset = a.tot > 1000,
+       channel = "BF.out",
+       N = 100,
+       box.size = 40)
+
+d2 <- QC.filter(d2, !(a.tot > 1000))
+
+# very small ones
+cimage(d2, ~cell,
+       subset = a.tot < 100,
+       channel = "BF.out",
+       N = 100,
+       box.size = 40)
+
+d2 <- QC.filter(d2, !(a.tot < 100))
+
+
+#################
+# ell.perim
+#################
+
+cplot(d2, el.p ~ a.tot, size = 0.6)
+
+cimage(d2, cut(el.p, 20) ~ cut(a.tot, 10),
+       channel="BF.out",
+       box.size = 30)
+
+# removes cells with ell.perim / perim < 0.8.
+d2 <- QC.filter(d2, !(el.p < 0.8))
+
+
+#################
+# Fluorescence
+#################
+
+# if necessary
+
+
+
+################################################################################
+# ANALYSIS
+################################################################################
+
+# plotplotplot!
+
+
+
+
+################################################################################
+# AGGREGATING DATA
+################################################################################
+
+# use Rcell::aggregateBy, and/or plyr::ddply

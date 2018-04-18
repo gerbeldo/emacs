@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: QC.filter
+# key: filt
+# --
+d2 <- QC.filter(d2, !(${1:el.p < $2}${3: & }${4:a.tot < $5}))$0

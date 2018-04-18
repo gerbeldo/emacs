@@ -1,0 +1,23 @@
+
+;; ----- smex-history -----
+(
+ package-refresh-contents
+ make-frame
+ org-toggle-pretty-entities
+ rgrep
+ describe-font
+ prettify-symbols-mode
+ visual-line-mode
+)
+
+;; ----- smex-data -----
+(
+ (org-version . 1)
+ (make-frame . 10)
+ (visual-line-mode . 1)
+ (prettify-symbols-mode . 2)
+ (org-toggle-pretty-entities . 4)
+ (describe-font . 1)
+ (rgrep . 2)
+ (package-refresh-contents . 1)
+)
