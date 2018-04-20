@@ -1,23 +1,25 @@
 
 ;; ----- smex-history -----
 (
- package-refresh-contents
- make-frame
- org-toggle-pretty-entities
- rgrep
- describe-font
- prettify-symbols-mode
  visual-line-mode
+ make-frame
+ org-toggle-inline-images
+ whitespace-mode
+ org-toggle-pretty-entities
+ package-refresh-contents
+ rgrep
 )
 
 ;; ----- smex-data -----
 (
  (org-version . 1)
- (make-frame . 10)
- (visual-line-mode . 1)
+ (make-frame . 16)
+ (visual-line-mode . 6)
  (prettify-symbols-mode . 2)
- (org-toggle-pretty-entities . 4)
+ (org-toggle-pretty-entities . 6)
  (describe-font . 1)
  (rgrep . 2)
  (package-refresh-contents . 1)
+ (whitespace-mode . 2)
+ (org-toggle-inline-images . 3)
 )

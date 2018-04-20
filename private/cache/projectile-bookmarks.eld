@@ -1,1 +1,1 @@
-("~/.emacs.d.bak/")
+("~/.emacs.d/" "~/.emacs.d.bak/")

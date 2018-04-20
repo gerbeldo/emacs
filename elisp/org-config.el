@@ -22,7 +22,5 @@
 
 (setq org-hide-emphasis-markers t) ;; hides markup characters for semi-WYSIWYG
 
-(add-hook 'org-mode-hook #'whitespace-mode)
-
 (provide 'org-config)
 ;;; org-config ends here
