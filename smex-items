@@ -1,27 +1,27 @@
 
 ;; ----- smex-history -----
 (
- org-toggle-inline-images
  make-frame
  visual-line-mode
+ rgrep
  package-list-packages
  package-refresh-contents
+ org-toggle-inline-images
  compile
- whitespace-mode
 )
 
 ;; ----- smex-data -----
 (
  (org-version . 1)
- (make-frame . 18)
- (visual-line-mode . 11)
+ (make-frame . 22)
+ (visual-line-mode . 13)
  (prettify-symbols-mode . 2)
  (org-toggle-pretty-entities . 6)
  (describe-font . 1)
- (rgrep . 2)
- (package-refresh-contents . 3)
+ (rgrep . 3)
+ (package-refresh-contents . 4)
  (whitespace-mode . 2)
- (org-toggle-inline-images . 10)
- (package-list-packages . 3)
+ (org-toggle-inline-images . 14)
+ (package-list-packages . 4)
  (compile . 1)
 )

@@ -28,5 +28,9 @@
 ;; default org links path to absolute, using "~" for HOME. Be careful on WINDOWS!
 (setq org-link-file-path-type 'absolute)
 
+;; use ivy for org-goto, bound to C-c C-j, to jump to headings
+(setq org-goto-interface 'outline-path-completion)
+(setq org-outline-path-complete-in-steps nil)
+
 (provide 'org-config)
 ;;; org-config ends here
