@@ -22,5 +22,11 @@
 
 (setq org-hide-emphasis-markers t) ;; hides markup characters for semi-WYSIWYG
 
+;; size of inline images to 300px
+(setq org-image-actual-width 300)
+
+;; default org links path to absolute, using "~" for HOME. Be careful on WINDOWS!
+(setq org-link-file-path-type 'absolute)
+
 (provide 'org-config)
 ;;; org-config ends here
