@@ -1,3 +1,5 @@
 backups/
 ./backups/
 elpa/
+private/
+backups/
