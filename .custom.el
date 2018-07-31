@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (which-key wgrep use-package undo-tree solarized-theme smex smartparens smart-mode-line rainbow-delimiters pyenv-mode py-autopep8 pip-requirements org-projectile org-bullets neotree multiple-cursors magit hlinum flycheck expand-region exec-path-from-shell ess elpy dashboard counsel-projectile ace-window))))
+    (ess pyenv-mode py-autopep8 pip-requirements elpy smart-mode-line ace-window rainbow-delimiters uniquify yasnippet wgrep which-key undo-tree smex smartparens org-bullets org-projectile neotree multiple-cursors magit hlinum counsel-projectile counsel flycheck expand-region exec-path-from-shell dashboard company avy solarized-theme use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

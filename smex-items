@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ comment-dwim
  make-frame
  visual-line-mode
  rgrep
  package-list-packages
  package-refresh-contents
  org-toggle-inline-images
- compile
 )
 
 ;; ----- smex-data -----
@@ -24,4 +24,5 @@
  (org-toggle-inline-images . 14)
  (package-list-packages . 4)
  (compile . 1)
+ (comment-dwim . 1)
 )
