@@ -66,8 +66,8 @@
  make-backup-files                  t
  create-lockfiles                   nil
  backup-directory-alist            `(("." . ,(concat user-emacs-directory "backups")))
- ;;auto-save-file-name-transforms    `((".*" ,(concat temp-dir "/auto-save-list/") t))))
-
+ ;;auto-save-file-name-transforms    `((".*" ,(concat temp-dir "/auto-save-list/") t)))
+)
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-auto-revert-mode t)
 
