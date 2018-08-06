@@ -32,5 +32,11 @@
 (setq org-goto-interface 'outline-path-completion)
 (setq org-outline-path-complete-in-steps nil)
 
+;; System locale to use for formatting time values.
+(setq system-time-locale "C")         ; Make sure that the weekdays in the
+                                      ; time stamps of your Org mode files and
+                                      ; in the agenda appear in English.
+
+
 (provide 'org-config)
 ;;; org-config ends here
