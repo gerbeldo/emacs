@@ -23,8 +23,8 @@ library(Rcell)
 
 load("$1_data.RData")
 
-analysis <- "~/Dropbox/m_analysis/$0"
-path <- "/run/media/german/GER-BAK/acl/"
+analysis <- "~/Dropbox/m_analysis/$1_$2"
+path <- "/run/german/GER-BAK/acl/$1_$2"
 
 
 setwd(path)
