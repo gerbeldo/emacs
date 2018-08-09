@@ -10,3 +10,4 @@ To use behind proxy, add
      ("https" . "proxy.fcen.uba.ar:8080")))
 ```
 
+To be able to use ESS when R was installed compiling from source, create a symlink of the R binary in a folder within the PATH. In this case, I used /usr/local/bin.
