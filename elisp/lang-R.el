@@ -10,19 +10,35 @@
   :init (require 'ess-site)
   :config
 
-  (setq ess-R-font-lock-keywords
-    '((ess-R-fl-keyword:modifiers . t)
+(setq ess-R-font-lock-keywords
+   (quote
+    ((ess-R-fl-keyword:modifiers . t)
      (ess-R-fl-keyword:fun-defs . t)
      (ess-R-fl-keyword:keywords . t)
-     (ess-R-fl-keyword:assign-ops)
+     (ess-R-fl-keyword:assign-ops . t)
      (ess-R-fl-keyword:constants . t)
      (ess-fl-keyword:fun-calls . t)
-     (ess-fl-keyword:numbers)
-     (ess-fl-keyword:operators)
+     (ess-fl-keyword:numbers . t)
+     (ess-fl-keyword:operators . t)
      (ess-fl-keyword:delimiters)
-     (ess-fl-keyword:=)
-     (ess-R-fl-keyword:F&T)
-     (ess-R-fl-keyword:%op%)))
+     (ess-fl-keyword:= . t)
+     (ess-R-fl-keyword:F&T . t)
+     ;; (ess-R-fl-keyword:%op% . t)
+     )))
+
+  ;; (setq ess-R-font-lock-keywords
+  ;; 	'((ess-R-fl-keyword:modifiers . t)
+  ;; 	  (ess-R-fl-keyword:fun-defs . t)
+  ;; 	  (ess-R-fl-keyword:keywords . t)
+  ;; 	  (ess-R-fl-keyword:assign-ops)
+  ;; 	  (ess-R-fl-keyword:constants . t)
+  ;; 	  (ess-fl-keyword:fun-calls)
+  ;; 	  (ess-fl-keyword:numbers)
+  ;; 	  (ess-fl-keyword:operators)
+  ;; 	  (ess-fl-keyword:delimiters)
+  ;; 	  (ess-fl-keyword:=)
+  ;; 	  (ess-R-fl-keyword:F&T)
+  ;; 	  (ess-R-fl-keyword:%op%)))
 
 ;; changes "-" to ";" to insert "<-", because underscores are often used.
   (setq ess-smart-S-assign-key ";")
@@ -35,7 +51,7 @@
                                     '(("\\<\\(g\\|FIXME\\|ToDo\\|BUG\\):"
                                        1 font-lock-warning-face t)))))
 
-    (add-hook 'ess-mode-hook #'whitespace-mode)
+    ;; (add-hook 'ess-mode-hook #'whitespace-mode)
 
     (defun my-ess-settings ()
       (setq ess-indent-with-fancy-comments nil))
