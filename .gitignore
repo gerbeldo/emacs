@@ -4,3 +4,5 @@ elpa/
 private/
 backups/
 smex-items
+eshell/
+tramp
