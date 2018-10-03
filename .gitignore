@@ -6,3 +6,4 @@ backups/
 smex-items
 eshell/
 tramp
+.custom.el
