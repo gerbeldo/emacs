@@ -35,7 +35,13 @@
 ;; System locale to use for formatting time values.
 (setq system-time-locale "C")         ; Make sure that the weekdays in the
                                       ; time stamps of your Org mode files and
-                                      ; in the agenda appear in English.
+					; in the agenda appear in English.
+
+
+(setq org-file-apps
+      '(("\\.tif\\'" . "gwenview %s")
+	("\\.jpg\\'" . "gwenview %s")
+	(auto-mode . emacs)))
 
 
 (provide 'org-config)
