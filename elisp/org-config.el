@@ -41,6 +41,7 @@
 (setq org-file-apps
       '(("\\.tif\\'" . "gwenview %s")
 	("\\.jpg\\'" . "gwenview %s")
+	("\\.png\\'" . "gwenview %s")
 	(auto-mode . emacs)))
 
 
