@@ -1,3 +1,8 @@
+(use-package paradox
+  :ensure t
+  :config
+  (paradox-enable))
+
 (use-package avy
   :bind
   ("C-c SPC" . avy-goto-char))
@@ -166,7 +171,7 @@
 
 (use-package uniquify
   ;; makes buffer names unique in a sensible way.
-
+  :ensure nil
   :config
   (setq uniquify-buffer-name-style 'forward))
 
