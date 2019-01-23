@@ -4,8 +4,10 @@
   (paradox-enable))
 
 (use-package avy
+  :config
+  (setq avy-timeout-seconds '0.2)
   :bind
-  ("C-c SPC" . avy-goto-char))
+  ("C-;" . avy-goto-char-timer))
 
 (use-package company
   :config

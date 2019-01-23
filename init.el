@@ -16,6 +16,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+
 (add-to-list 'load-path (concat user-emacs-directory "elisp"))
 
 (require 'base)
@@ -24,6 +25,7 @@
 (require 'base-functions)
 (require 'base-global-keys)
 (require 'org-config)
+
 
 (require 'lang-python)
 (require 'lang-R)
