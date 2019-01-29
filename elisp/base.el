@@ -83,6 +83,7 @@
 ;; Delete trailing whitespace before save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(load custom-file)
 
 (provide 'base)
 ;;; base ends here
