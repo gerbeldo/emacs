@@ -11,7 +11,7 @@
   (setq ess-indent-with-fancy-comments nil))
   (require 'ess-site)
   :config
-
+(setq ess-indent-with-fancy-comments nil)
 (setq ess-R-font-lock-keywords
    (quote
     ((ess-R-fl-keyword:modifiers . t)

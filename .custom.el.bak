@@ -3,10 +3,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ein:completion-backend (quote ein:use-company-backend))
  '(ess-indent-with-fancy-comments nil)
  '(package-selected-packages
    (quote
-    (which-key wgrep use-package undo-tree solarized-theme smex smartparens smart-mode-line rainbow-delimiters py-autopep8 pip-requirements org-bullets neotree multiple-cursors magit hlinum flycheck expand-region exec-path-from-shell ess elpy dashboard counsel ace-window))))
+    (conda which-key wgrep use-package undo-tree solarized-theme smex smartparens smart-mode-line rainbow-delimiters python-environment pyenv-mode py-autopep8 pip-requirements paradox org-projectile org-bullets neotree multiple-cursors magit hlinum ghub flycheck expand-region exec-path-from-shell ess epc elpy ein dashboard counsel-projectile ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
