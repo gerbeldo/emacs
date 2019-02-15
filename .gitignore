@@ -7,3 +7,4 @@ smex-items
 eshell/
 tramp
 .custom.el
+init.el
