@@ -7,9 +7,11 @@
 (use-package ess
   :ensure t
   :mode ("\\.R" . R-mode)
-  :init (require 'ess-site)
+  :init
+  (setq ess-indent-with-fancy-comments nil))
+  (require 'ess-site)
   :config
-
+(setq ess-indent-with-fancy-comments nil)
 (setq ess-R-font-lock-keywords
    (quote
     ((ess-R-fl-keyword:modifiers . t)
@@ -40,10 +42,10 @@
 
     ;; (add-hook 'ess-mode-hook #'whitespace-mode)
 
-    (defun my-ess-settings ()
-      (setq ess-indent-with-fancy-comments nil))
+   (defun my-ess-settings ()
+     (setq ess-indent-with-fancy-comments nil))
+   (add-hook 'ess-mode-hook #'my-ess-settings)
 
-    (add-hook 'ess-mode-hook #'my-ess-settings))
 
 (provide 'lang-R)
 ;;; lang-R.el ends here

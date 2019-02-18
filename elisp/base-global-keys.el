@@ -2,9 +2,10 @@
 
 ;(global-set-key (kbd "[SHORTCUT]") '[FUNCTION])
 
-;; remap C-a to `smarter-move-beginning-of-line'
-(global-set-key [remap move-beginning-of-line]
-                'smarter-move-beginning-of-line)
+;; remap C-a to 'smarter-move-beginning-of-line'
+
+(global-set-key [home] 'smarter-move-beginning-of-line)
+(global-set-key "\C-a" 'smarter-move-beginning-of-line)
 
 
 ;; remap C-k to "kill-buffer-and-its-windows"
