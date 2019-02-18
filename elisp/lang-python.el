@@ -78,16 +78,16 @@
 ;; (add-hook 'projectile-after-switch-project-hook 'pyenv-activate-current-project)
 
 
-(use-package ein
-  :ensure t
-  :init (require 'ein)
-  (require 'ein-notebook)
-  (require 'ein-subpackages))
+;; (use-package ein
+;;   :ensure t
+;;   :init (require 'ein)
+;;   (require 'ein-notebook)
+;;   (require 'ein-subpackages))
 
-(use-package conda
-  :ensure t
-  :init (require 'conda)
-  :config (setq conda-anaconda-home "/home/german/apps/anaconda3/"))
+;; (use-package conda
+;;   :ensure t
+;;   :init (require 'conda)
+;;   :config (setq conda-anaconda-home "/home/german/apps/anaconda3/"))
 
 ;; :commands ein:notebooklist-open
 ;; :init
@@ -101,6 +101,20 @@
 ;;     (define-key ein:notebook-mode-map (kbd "C-s") 'ein:notebook-save-notebook-command)
 ;;     (define-key ein:notebook-mode-map (kbd "<M-S-up>") 'ein:worksheet-move-cell-up)
 ;;     (define-key ein:notebook-mode-map (kbd "<M-S-down>") 'ein:worksheet-move-cell-down))))
+
+
+(use-package elpy
+  :ensure t
+  :defer 2
+  :init
+  (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+  (elpy-enable)
+  :config
+  (setq python-shell-interpreter "ipython"
+	python-shell-interpreter-args "-i --simple-prompt")
+  (setq elpy-rpc-backend "jedi")
+  (setq elpy-rpc-python-command "python"))
+
 
 (provide 'lang-python)
 ;;; base-python.el ends here
