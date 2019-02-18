@@ -3,7 +3,15 @@
         '("melpa" . "http://melpa.org/packages/")
         '("elpy" . "http://jorgenschaefer.github.io/packages/"))
 
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+
+
 (package-initialize)
+
+;; copies env variables from shell, so they are used when starting emacs
+;; from GUI (on macOS and linux)
+;;(when (memq window-system '(mac ns x))
+;;  (exec-path-from-shell-initialize))
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
