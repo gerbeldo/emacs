@@ -4,10 +4,8 @@
 
 ;;; Code:
 
-(setq url-proxy-services
-   '(("no_proxy" . "^\\(localhost\\|10.*\\)")
-     ("http" . "proxy.fcen.uba.ar:8080")
-     ("https" . "proxy.fcen.uba.ar:8080")))
+;; file with proxy config to use on ifibyne/uba
+(require 'proxy)
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
