@@ -38,17 +38,17 @@
 ;;     (setq elpy-rpc-python-command "python3")))
 
 
-(use-package elpy
-  :ensure t
-  :defer 2
-  :init
-  (elpy-enable)
-  :config
-  (setq python-shell-interpreter "ipython"
-	python-shell-interpreter-args "-i --simple-prompt")
-  (setq elpy-rpc-backend "jedi")
-  (setq elpy-rpc-python-command "ipython")
-  (setq elpy-company-add-completion-from-shell t))
+;; (use-package elpy
+;;   :ensure t
+;;   :defer 2
+;;   :init
+;;   (elpy-enable)
+;;   :config
+;;   (setq python-shell-interpreter "ipython"
+;; 	python-shell-interpreter-args "-i --simple-prompt")
+;;   (setq elpy-rpc-backend "jedi")
+;;   (setq elpy-rpc-python-command "ipython")
+;;   (setq elpy-company-add-completion-from-shell t))
 
 
 
