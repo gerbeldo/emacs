@@ -45,5 +45,7 @@
 	(auto-mode . emacs)))
 
 
+(setq org-cycle-separator-lines 1)
+
 (provide 'org-config)
 ;;; org-config ends here
