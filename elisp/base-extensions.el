@@ -10,8 +10,23 @@
   ("C-;" . avy-goto-char-timer))
 
 (use-package company
-  :config
-  (add-hook 'after-init-hook 'global-company-mode))
+  :ensure t
+  :defer 2
+  :diminish
+  :custom
+  (company-begin-commands '(self-insert-command))
+  (company-idle-delay .1)
+  (company-minimum-prefix-length 2)
+  (company-show-numbers t)
+  (company-tooltip-align-annotations 't)
+  (global-company-mode t))
+
+;; company-box needs emacs 26
+;;(use-package company-box
+  ;;:ensure t
+  ;;:after company
+  ;;:diminish
+  ;;:hook (company-mode . company-box-mode))
 
 (use-package dashboard
   :config
