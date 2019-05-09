@@ -2,6 +2,10 @@
 ;; org-mode configuration                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; auto fill mode, breaks lines longer than 80 characters
+
+(add-hook 'org-mode-hook 'auto-fill-mode)
+
 ;; indent mode
 
 (setq org-startup-indented 1)
