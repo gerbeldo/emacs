@@ -2,6 +2,9 @@
 ;; org-mode configuration                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; set org directory for capture files
+(setq org-directory "~/Dropbox/org/capture/"
+
 ;; auto fill mode, breaks lines longer than 80 characters
 
 (add-hook 'org-mode-hook 'auto-fill-mode)
@@ -50,6 +53,8 @@
 
 
 (setq org-cycle-separator-lines 1)
+
+
 
 (provide 'org-config)
 ;;; org-config ends here
