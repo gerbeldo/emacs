@@ -2,6 +2,13 @@
 ;; org-mode configuration                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; set org directory for capture files
+(setq org-directory "~/Dropbox/org/capture/"
+
+;; auto fill mode, breaks lines longer than 80 characters
+
+(add-hook 'org-mode-hook 'auto-fill-mode)
+
 ;; indent mode
 
 (setq org-startup-indented 1)
@@ -43,6 +50,10 @@
 	("\\.jpg\\'" . "gwenview %s")
 	("\\.png\\'" . "gwenview %s")
 	(auto-mode . emacs)))
+
+
+(setq org-cycle-separator-lines 1)
+
 
 
 (provide 'org-config)
