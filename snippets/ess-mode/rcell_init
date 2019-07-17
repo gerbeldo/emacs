@@ -4,34 +4,36 @@
 # --
 
 ################################################################################
-# $1_$2
+# $1-$2_$3
 ################################################################################
 
 ########################################
 # Microscopio
 ########################################
 
-# t_exp.r = {$3:1000}ms
-# t_exp.y = $4ms
-# t_exp.c = {$5:300}ms
+# t_exp.r = ${4:1000}ms
+# t_exp.y = ${5:1000}ms
+# t_exp.c = ${6:300}ms
 
-# intensidad.r = {$6:100}%
-# intensidad.y = {$7:100}%
-# intensidad.c = {$8:100}%
+# intensidad.r = 100%
+# intensidad.y = 100%
+# intensidad.c = 100%
+
+$0
 
 library(Rcell)
 
-load("$1_data.RData")
+load("$1-$2_data.RData")
 
-analysis <- "~/Dropbox/m_analysis/$1_$2"
-path <- "/run/german/GER-BAK/acl/$1_$2"
+analysis <- "~/Dropbox/m_analysis/$1/$1-$2_$3"
+path <- "/$1-$2_$3"
 
 
 setwd(path)
 d <- load.cell.data()
 
 setwd(analysis)
-pdata <- read.csv("$1_pdata.csv")
+pdata <- read.csv("$1-$2_pdata.csv")
 
 d <- merge(d, pdata)
 
@@ -58,7 +60,7 @@ d <- transform(d, el.p = ell.perim / perim)
 # IMAGE
 ################################################################################
 
-save.image("$1_data.RData")
+save.image("$1-$2_data.RData")
 
 
 ################################################################################
@@ -73,6 +75,7 @@ d2 <- d
 
 # count total/filtered
 count(d2$data, vars = "QC")
+
 
 #################
 # fft.stat
@@ -143,7 +146,6 @@ d2 <- QC.filter(d2, !(el.p < 0.8))
 # ANALYSIS
 ################################################################################
 
-# plotplotplot!
 
 
 
