@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; set org directory for capture files
-(setq org-directory "~/Dropbox/org/capture/"
+(setq org-directory "~/Dropbox/org/capture/")
 
 ;; auto fill mode, breaks lines longer than 80 characters
 
