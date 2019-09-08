@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; set org directory for capture files
-(setq org-directory "~/Dropbox/org/capture/"
+(setq org-directory "~/Dropbox/org/capture/")
 
 ;; auto fill mode, breaks lines longer than 80 characters
 
@@ -46,9 +46,9 @@
 
 
 (setq org-file-apps
-      '(("\\.tif\\'" . "gwenview %s")
-	("\\.jpg\\'" . "gwenview %s")
-	("\\.png\\'" . "gwenview %s")
+      '(("\\.tif\\'" . "open %s")
+	("\\.jpg\\'" . "open %s")
+	("\\.png\\'" . "open %s")
 	(auto-mode . emacs)))
 
 

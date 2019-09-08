@@ -4,9 +4,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ess-indent-with-fancy-comments nil)
+ '(org-directory "~/Dropbox/org/capture")
  '(package-selected-packages
    (quote
-    (which-key wgrep use-package undo-tree solarized-theme smex smartparens smart-mode-line rainbow-delimiters py-autopep8 pip-requirements org-bullets neotree multiple-cursors magit hlinum flycheck expand-region exec-path-from-shell ess elpy dashboard counsel ace-window))))
+    (yasnippet magit-popup company avy paradox which-key wgrep use-package undo-tree solarized-theme smex smartparens smart-mode-line rainbow-delimiters py-autopep8 pip-requirements org-bullets neotree multiple-cursors magit hlinum flycheck expand-region exec-path-from-shell ess elpy dashboard counsel ace-window))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
