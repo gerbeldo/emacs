@@ -8,3 +8,4 @@ eshell/
 tramp
 .custom.el
 elisp/proxy.el
+.custom.el
