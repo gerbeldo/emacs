@@ -45,11 +45,20 @@
 					; in the agenda appear in English.
 
 
+;; (setq org-file-apps
+;;       '(("\\.tif\\'" . "gwenview %s")
+;; 	("\\.jpg\\'" . "gwenview %s")
+;; 	("\\.png\\'" . "gwenview %s")
+;; 	(auto-mode . emacs)))
+
+
+;; in macOS, the command line utility open, uses default app to open file
 (setq org-file-apps
-      '(("\\.tif\\'" . "gwenview %s")
-	("\\.jpg\\'" . "gwenview %s")
-	("\\.png\\'" . "gwenview %s")
+      '(("\\.tif\\'" . "open %s")
+	("\\.jpg\\'" . "open %s")
+	("\\.png\\'" . "open %s")
 	(auto-mode . emacs)))
+
 
 
 (setq org-cycle-separator-lines 1)
