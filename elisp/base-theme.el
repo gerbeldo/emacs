@@ -8,8 +8,8 @@
 ;; font
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'default-frame-alist
-                       '(font . "Office Code Pro-10"))
+;; (add-to-list 'default-frame-alist
+;;                        '(font . "Office Code Pro-10"))
 
 
 (provide 'base-theme)
