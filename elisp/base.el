@@ -88,6 +88,9 @@
 
 (show-paren-mode 1)
 
+;; use right option key as accent modifier
+(setq ns-right-option-modifier nil)
+
 ;; Delete trailing whitespace before save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
