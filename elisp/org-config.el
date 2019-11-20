@@ -57,6 +57,7 @@
       '(("\\.tif\\'" . "open %s")
 	("\\.jpg\\'" . "open %s")
 	("\\.png\\'" . "open %s")
+	("\\.jpeg\\'" . "open %s")
 	(auto-mode . emacs)))
 
 
