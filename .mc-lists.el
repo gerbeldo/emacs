@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
 	org-cycle
+	org-delete-char
 	org-self-insert-command
 	))
 
