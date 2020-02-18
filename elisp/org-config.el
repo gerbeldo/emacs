@@ -61,9 +61,26 @@
 	(auto-mode . emacs)))
 
 
-
+;; space between headings
 (setq org-cycle-separator-lines 1)
 
+;; add time when task is completed
+;; (setq org-log-done (quote time))
+
+
+
+;; To use with C-c C-t. All of them ask for note (@). C-c C-c for empty note.
+(setq org-todo-keywords
+      '((sequence "TODO(t@)" "|" "DONE(d@)" "CANCELED(c@)")))
+
+;; keeps log entries after todo in LOGBOOK drawer, to open with extra TAB
+(setq org-log-into-drawer t)
+
+;; order logs in LOGBOOK chronologically (oldest first)
+(setq org-log-states-order-reversed nil)
+
+;; treat TODO insertion as state change for logging
+(setq org-treat-insert-todo-heading-as-state-change t)
 
 
 (provide 'org-config)
