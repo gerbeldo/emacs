@@ -82,6 +82,15 @@
 ;; treat TODO insertion as state change for logging
 (setq org-treat-insert-todo-heading-as-state-change t)
 
+;; SUPER AGENDA
+;; todo
+
+
+;; org cycle hook calls the quoted functions after TAB in heading
+;; removed org-cycle-hide-drawers
+(setq org-cycle-hook
+   (quote
+    (org-cycle-hide-archived-subtrees org-cycle-show-empty-lines org-optimize-window-after-visibility-change)))
 
 (provide 'org-config)
 ;;; org-config ends here
