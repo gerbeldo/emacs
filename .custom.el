@@ -6,7 +6,7 @@
  '(ess-indent-with-fancy-comments nil)
  '(org-agenda-files
    (quote
-    ("~/Dropbox/org/projects/2020-01-20_kar4_mutants.org" "~/Dropbox/org/projects/2020_misc.org" "~/Dropbox/org/projects/2019-11_post_SAIB.org")))
+    ("~/Dropbox/org/projects/2020-02_Y2H_ste12-kar4.org" "~/Dropbox/org/projects/2020-01-20_kar4_mutants.org" "~/Dropbox/org/projects/2020_misc.org" "~/Dropbox/org/projects/2019-11_post_SAIB.org")))
  '(org-directory "~/Dropbox/org/capture")
  '(package-selected-packages
    (quote
