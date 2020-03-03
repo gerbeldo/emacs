@@ -222,9 +222,9 @@
   ("C-S-<mouse-1>" . mc/add-cursor-on-click)
   ("C-S-SPC" . set-rectangular-region-anchor))
 
-(use-package org-super-agenda
-  :ensure t
-  :config (org-super-agenda-mode))
+;; (use-package org-super-agenda
+;;   :ensure t
+;;   :config (org-super-agenda-mode))
 
 
 (provide 'base-extensions)
