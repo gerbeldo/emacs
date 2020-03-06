@@ -92,5 +92,9 @@
    (quote
     (org-cycle-hide-archived-subtrees org-cycle-show-empty-lines org-optimize-window-after-visibility-change)))
 
+
+;; right align tags in agenda views
+(setq org-agenda-tags-column -100)
+
 (provide 'org-config)
 ;;; org-config ends here
