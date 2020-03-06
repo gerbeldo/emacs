@@ -94,7 +94,13 @@
 ;; Delete trailing whitespace before save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(setq initial-frame-alist
+      '((top . 1) (left . 1) (width . 120) (height . 60)))
+
+
 (load custom-file)
+
+
 
 (provide 'base)
 ;;; base ends here
