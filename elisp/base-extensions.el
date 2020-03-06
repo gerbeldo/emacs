@@ -104,13 +104,18 @@
 (use-package magit-popup)
 
 
-(use-package neotree
-  :config
-  (setq neo-theme 'arrow
-        neotree-smart-optn t
-        neo-window-fixed-size nil)
-  ;; Disable linum for neotree
-  (add-hook 'neo-after-create-hook 'disable-neotree-hook))
+;; ToDo: have to delete this package
+;; (use-package neotree
+;;   :config
+;;   (setq neo-theme 'arrow
+;;         neotree-smart-optn t
+;;         neo-window-fixed-size nil)
+;;   ;; Disable linum for neotree
+;;   (add-hook 'neo-after-create-hook 'disable-neotree-hook))
+
+(use-package dired-sidebar
+  :ensure t
+  :commands (dired-sidebar-toggle-sidebar))
 
 (use-package org
   :config
