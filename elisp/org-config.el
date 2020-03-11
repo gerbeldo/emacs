@@ -71,7 +71,7 @@
 
 ;; To use with C-c C-t. All of them ask for note (@). C-c C-c for empty note.
 (setq org-todo-keywords
-      '((sequence "TODO(t@)" "|" "DONE(d@)" "CANCELED(c@)")))
+      '((sequence "TODO(t@)" "|" "DONE(d@)" "CANCELED(c@)" "WAITING(w@)")))
 
 ;; keeps log entries after todo in LOGBOOK drawer, to open with extra TAB
 (setq org-log-into-drawer t)
