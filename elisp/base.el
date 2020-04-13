@@ -1,7 +1,7 @@
 (require 'package)
 (add-to-list 'package-archives
-        '("melpa" . "http://melpa.org/packages/")
-        '("elpy" . "http://jorgenschaefer.github.io/packages/"))
+        '("melpa" . "https://melpa.org/packages/")
+        '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 
