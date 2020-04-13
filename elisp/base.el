@@ -100,6 +100,10 @@
 
 (load custom-file)
 
+;; new emacs line numbering
+(global-display-line-numbers-mode 1)
+(add-hook 'dired-sidebar-mode-hook (lambda () (display-line-numbers-mode -1)))
+
 
 
 (provide 'base)

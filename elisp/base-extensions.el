@@ -77,14 +77,14 @@
   (define-key read-expression-map (kbd "C-r") 'counsel-expression-history))
 
 
-(use-package hlinum
-  :config
-  (hlinum-activate))
+;; (use-package hlinum
+;;   :config
+;;   (hlinum-activate))
 
-(use-package linum
-  :config
-  (setq linum-format " %3d ")
-  (global-linum-mode nil))
+;; (use-package linum
+;;   :config
+;;   (setq linum-format " %3d ")
+;;   (global-linum-mode nil))
 
 (use-package magit
   :config
@@ -102,11 +102,6 @@
   ("C-x g r" . magit-rebase-interactive))
 
 (use-package magit-popup)
-
-
-(use-package dired-sidebar
-  :ensure t
-  :commands (dired-sidebar-toggle-sidebar))
 
 (use-package org
   :config
@@ -221,6 +216,28 @@
 ;; (use-package org-super-agenda
 ;;   :ensure t
 ;;   :config (org-super-agenda-mode))
+
+(use-package vscode-icon
+  :ensure t
+  :commands (vscode-icon-for-file))
+
+(use-package dired-sidebar
+  :bind (("C-x C-n" . dired-sidebar-toggle-sidebar))
+  :ensure t
+  :commands (dired-sidebar-toggle-sidebar)
+  :init
+  (add-hook 'dired-sidebar-mode-hook
+            (lambda ()
+              (unless (file-remote-p default-directory)
+                (auto-revert-mode))))
+  :config
+  (push 'toggle-window-split dired-sidebar-toggle-hidden-commands)
+  (push 'rotate-windows dired-sidebar-toggle-hidden-commands)
+
+  (setq dired-sidebar-subtree-line-prefix "__")
+  (setq dired-sidebar-theme 'vscode)
+  (setq dired-sidebar-use-term-integration t)
+  (setq dired-sidebar-use-custom-font t))
 
 
 (provide 'base-extensions)
