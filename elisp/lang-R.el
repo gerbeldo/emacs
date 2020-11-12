@@ -1,8 +1,8 @@
-;;; package --- R configs
-;;; Commentary:
-;;; Contains my R configs
+package --- R configs
+Commentary:
+Contains my R configs
 
-;;; Code:
+Code:
 
 (use-package ess
   :ensure t
@@ -48,4 +48,4 @@
 
 
 (provide 'lang-R)
-;;; lang-R.el ends here
+lang-R.el ends here

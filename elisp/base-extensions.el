@@ -3,6 +3,7 @@
   :config
   (paradox-enable))
 
+
 (use-package avy
   :config
   (setq avy-timeout-seconds '0.2)
@@ -11,22 +12,20 @@
 
 (use-package company
   :ensure t
-  :defer 2
-  :diminish
+  :config
+  (global-company-mode t)
   :custom
   (company-begin-commands '(self-insert-command))
-  (company-idle-delay .1)
+  (company-idle-delay .3)
   (company-minimum-prefix-length 2)
   (company-show-numbers t)
-  (company-tooltip-align-annotations 't)
-  (global-company-mode t))
+  (company-tooltip-align-annotations 't))
 
-;; company-box needs emacs 26
-;;(use-package company-box
-  ;;:ensure t
-  ;;:after company
-  ;;:diminish
-  ;;:hook (company-mode . company-box-mode))
+(use-package company-box
+  :ensure t
+  :after company
+  :diminish
+  :hook (company-mode . company-box-mode))
 
 (use-package dashboard
   :config
@@ -101,15 +100,19 @@
   ("C-x g e" . magit-ediff-resolve)
   ("C-x g r" . magit-rebase-interactive))
 
-(use-package magit-popup)
+;;(use-package magit-popup)
+;; (use-package transient
+;;   :demand t
+;;   :custom
+;;   (transient-show-popup 1))
+  ;; :general
+  ;; ;; Key mapping approach is based on what transient-bind-q-to-quit does.
+  ;; (:keymaps 'transient-base-map
+  ;;  "<escape>" 'transient-quit-one)
+  ;; (:keymaps 'transient-sticky-map
+  ;;  "<escape>" 'transient-quit-seq))
 
-(use-package org
-  :config
-  (setq org-directory "~/org-files"
-        org-default-notes-file (concat org-directory "/todo.org"))
-  :bind
-  ("C-c l" . org-store-link)
-  ("C-c a" . org-agenda))
+(use-package org)
 
 ;; (use-package org-projectile
 ;;   :config
@@ -156,26 +159,13 @@
   :config
   (which-key-mode))
 
-(use-package windmove
-  :bind
-  ("C-x <up>" . windmove-up)
-  ("C-x <down>" . windmove-down)
-  ("C-x <left>" . windmove-left)
-  ("C-x <right>" . windmove-right))
-
-(use-package wgrep)
+;;(use-package wgrep)
 
 (use-package yasnippet
   :config
   (yas-global-mode 1))
 
 ;; MY PACKAGES
-
-(use-package uniquify
-  ;; makes buffer names unique in a sensible way.
-  :ensure nil
-  :config
-  (setq uniquify-buffer-name-style 'forward))
 
 
 (use-package saveplace
@@ -186,7 +176,6 @@
 
 
 (use-package rainbow-delimiters
-  :ensure t
   :config
   (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
   (add-hook 'ess-mode-hook 'rainbow-delimiters-mode))

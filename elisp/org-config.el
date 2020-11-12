@@ -4,6 +4,7 @@
 
 ;; set org directory for capture files
 (setq org-directory "~/Dropbox/org/capture/")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
 
 ;; auto fill mode, breaks lines longer than 80 characters
 
@@ -43,7 +44,6 @@
 (setq system-time-locale "C")         ; Make sure that the weekdays in the
                                       ; time stamps of your Org mode files and
 					; in the agenda appear in English.
-
 
 ;; (setq org-file-apps
 ;;       '(("\\.tif\\'" . "gwenview %s")
