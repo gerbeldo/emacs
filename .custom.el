@@ -8,7 +8,7 @@
    '("~/Dropbox/org/projects/2020-02_ChIP_kar4_ste12.org" "~/Dropbox/org/projects/2020-02_sum1.org" "~/Dropbox/org/projects/2020-02_Y2H_ste12-kar4.org" "~/Dropbox/org/projects/2020-01-20_kar4_mutants.org" "~/Dropbox/org/projects/2020_misc.org" "~/Dropbox/org/projects/2019-11_post_SAIB.org"))
  '(org-directory "~/Dropbox/org/capture")
  '(package-selected-packages
-   '(uniquify company-box vscode-icon dired-sidebar org-super-agenda yasnippet magit-popup company avy paradox which-key wgrep use-package undo-tree solarized-theme smex smartparens smart-mode-line rainbow-delimiters py-autopep8 pip-requirements org-bullets multiple-cursors magit flycheck expand-region exec-path-from-shell ess elpy dashboard counsel ace-window))
+   '(org-download uniquify company-box vscode-icon dired-sidebar org-super-agenda yasnippet magit-popup company avy paradox which-key wgrep use-package undo-tree solarized-theme smex smartparens smart-mode-line rainbow-delimiters py-autopep8 pip-requirements org-bullets multiple-cursors magit flycheck expand-region exec-path-from-shell ess elpy dashboard counsel ace-window))
  '(paradox-github-token t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -207,12 +207,10 @@
 ;;   :config (org-super-agenda-mode))
 
 (use-package vscode-icon
-  :ensure t
   :commands (vscode-icon-for-file))
 
 (use-package dired-sidebar
   :bind (("C-x C-n" . dired-sidebar-toggle-sidebar))
-  :ensure t
   :commands (dired-sidebar-toggle-sidebar)
   :init
   (add-hook 'dired-sidebar-mode-hook
@@ -228,5 +226,12 @@
   (setq dired-sidebar-use-term-integration t)
   (setq dired-sidebar-use-custom-font t))
 
+
+(use-package org-download
+  :defer t
+  :after (:any 'org 'org-journal)
+  :config
+  (org-download-enable)
+  (add-hook 'dired-mode-hook 'org-download-enable))
 
 (provide 'base-extensions)

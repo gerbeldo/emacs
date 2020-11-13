@@ -1,0 +1,5 @@
+
+In end of data:
+dashboard-widgets.el:817:1:Warning: the following functions are not known to
+    be defined: all-the-icons-fileicon, all-the-icons-octicon, org-today,
+    org-time-less-p
