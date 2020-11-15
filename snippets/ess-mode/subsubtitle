@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: subsubtitle
-# key: subsubtitle
-# --
-####################
-# $1
-####################
-
-$0
